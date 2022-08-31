@@ -7,7 +7,7 @@ Pacotes para instalar:
 
 Como rodar aplicação:
 - npm run create
-ou
+- ou
 - node api.js
 
 
