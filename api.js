@@ -6,7 +6,7 @@ const xl = require('excel4node');
 const wb = new xl.Workbook();
 const ws = wb.addWorksheet('Countries List');
 
-const archiveName = 'teste.xlsx'
+const archiveName = 'CountriesList.xlsx'
 
 
 
@@ -131,8 +131,12 @@ function apiCountriesExcel(countriesIndex) {
   });
 
 
-  wb.write(archiveName, () =>{
-    
+  wb.write(archiveName, (err, stats) =>{
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(`Arquivo ${archiveName} criado com sucesso!`)
+    }
   })
 
 }
