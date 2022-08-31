@@ -8,7 +8,7 @@ Pacotes para instalar:
 Como rodar aplicação:
 - npm run create
 - ou
-- node api.js
+- node ./api.js
 
 
 Arquivo gerado na pasta raiz nome: CountriesList.xlsx
