@@ -33,7 +33,7 @@ function apiCountriesExcel(countriesIndex) {
   for (i = 0; i < countriesIndex.length; i++) {
     const valueName = String(countriesIndex[i].name.common)
     const valueCapital = String(countriesIndex[i].capital)
-    const valueArea = String(countriesIndex[i].area)
+    const valueArea = Number(countriesIndex[i].area).toLocaleString('pt-BR', {style: 'currency',currency: 'USD', minimumFractionDigits: 2}).replace("US$", "")
     const valueCurrencies = String(JSON.stringify(countriesIndex[i].currencies)).substring(2, 5)
 
     if (valueCurrencies == 'undefined') {
